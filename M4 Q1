@@ -1,0 +1,38 @@
+#include <iostream>
+#include <iomanip>
+using namespace std;
+
+int main()
+{
+    //input 
+    
+    double price, servicePercent, subtotal, serviceCharge, finalBill, share;
+    int quantity, students;
+
+    cout << "Enter meal price: ";
+    cin >> price; 
+    
+    cout << "Enter quantity ordered: ";
+    cin >> quantity;
+    
+    cout << "Enter service charge percentage: ";
+    cin >> servicePercent;
+    
+    cout << "Enter number of students sharing: ";
+    cin >> students;
+    
+    // Process
+    
+    subtotal = price * quantity;
+    serviceCharge = subtotal * (servicePercent / 100.0);
+    finalBill = subtotal + serviceCharge;
+    share = finalBill / students;
+    
+    cout << fixed << setprecision(2);
+    cout << "\nSubtotal: " << subtotal << endl;
+    cout << "Service Charge: " << serviceCharge << endl;
+    cout << "Final Bill: " << finalBill << endl;
+    cout << "Share/student: " << share << endl;
+
+    return 0;
+}
