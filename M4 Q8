@@ -1,0 +1,49 @@
+#include <iostream>
+#include <iomanip>
+#include <cmath>
+
+using namespace std;
+
+int main()
+{
+    double T1, T2, T3, averageTemp, absoluteDiff;
+    int Faverage, Caverage, Traverage, Raverage;
+    
+    //Input
+    
+    cout << "Enter Temperature 1: ";
+    cin >> T1;
+    
+    cout << "Enter Temperature 2: ";
+    cin >> T2;
+    
+    cout << "Enter Temperature 3: ";
+    cin >> T3;
+    
+    //Process
+    
+    averageTemp = (T1 + T2 + T3) / 3;
+    
+    absoluteDiff = fabs(T1 - T3);
+    
+    Faverage = floor(averageTemp);
+    
+    Caverage = ceil(averageTemp);
+    
+    Traverage = trunc(averageTemp);
+    
+    Raverage = round (averageTemp);
+    
+    //Output 
+    
+    cout << fixed << setprecision(3);
+    
+    cout << "\nAverage Temperature: " << averageTemp << endl;
+    cout << "Absolute Difference of T1 and T3: " << absoluteDiff << endl;
+    cout << "Floor: " << Faverage << endl;
+    cout << "Ceil: " << Caverage << endl;
+    cout << "trunc: " << Traverage << endl;
+    cout << "Round: " << Raverage << endl;
+    
+    return 0;
+}
