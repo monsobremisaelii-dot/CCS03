@@ -1,0 +1,38 @@
+#include <iostream>
+#include <cmath>
+#include <iomanip>
+
+using namespace std;
+
+
+int main()
+{
+    
+    //Input
+    
+    double exactTables;
+    int Attendees, Seats, tablesRequired, availSeats, unusedSeats;
+    
+    cout << "Enter Number of Attendees: ";
+    cin >> Attendees;
+    
+    cout << "Enter Seats Per Table: ";
+    cin >> Seats;
+    
+    //Processing
+    
+    exactTables = (double) Attendees / Seats;
+   tablesRequired = ceil(exactTables);
+    availSeats = tablesRequired * Seats;
+    unusedSeats = availSeats - Attendees;
+    
+    // Output
+    
+    cout << fixed << setprecision(2);
+    cout << "\nExact Tables: " << exactTables << endl;
+    cout << "Tables Required: " << tablesRequired << endl;
+    cout << "Available Seats: " << availSeats << endl;
+    cout << "Unused Seats: " << unusedSeats << endl;
+    
+    return 0;
+}
